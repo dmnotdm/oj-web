@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: oj-web
+server:
+  port: 9090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://host.ip:8000/eureka/

@@ -11,5 +11,27 @@
 
     <artifactId>oj-web</artifactId>
 
+    <!-- @formatter:off -->
+    <build>
+        <plugins>
+            <plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin>
+            <plugin><groupId>com.spotify</groupId><artifactId>docker-maven-plugin</artifactId></plugin>
+            <plugin><groupId>io.fabric8</groupId><artifactId>docker-maven-plugin</artifactId></plugin>
+        </plugins>
+    </build>
+    <!-- @formatter:on -->
+
+    <!-- @formatter:off -->
+    <dependencies>
+        <dependency><groupId>com.zzz.oj</groupId><artifactId>oj-user-client</artifactId></dependency>
+
+        <dependency><groupId>org.springframework.cloud</groupId><artifactId>spring-cloud-starter-netflix-eureka-client</artifactId></dependency>
+        <dependency><groupId>org.springframework.cloud</groupId><artifactId>spring-cloud-starter-netflix-zuul</artifactId></dependency>
+    </dependencies>
+    <!-- @formatter:on -->
+
+    <properties>
+        <!--<mainClass>com.zzz.oj.UserApplication</mainClass>-->
+    </properties>
 
 </project>
